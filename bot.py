@@ -23,7 +23,10 @@ admin_reply_target = {}
 START_TEXT = (
     "🎉 Поздравляю! Ты успел купить билет в первую волну.\n\n"
     "В течение часа отправь данные в формате, указанном ниже, "
-    "и жди ответ от организатора!"
+    "и жди ответ от организаторов!\n\n"
+    "1. ФИО\n"
+    "2. Телеграмм\n"
+    "3. Кто тебя пригласил(необязательно)"
 )
 
 # --- /start ---
@@ -96,5 +99,6 @@ app = ApplicationBuilder().token(TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CallbackQueryHandler(admin_buttons))
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, user_message))
+
 
 app.run_polling()
