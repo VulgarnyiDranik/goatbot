@@ -9,7 +9,7 @@ from telegram.ext import (
 )
 
 TOKEN = "8524916434:AAH2V0JbHb3pio9y0BO5HKsjQcSjpLql1q0"
-ADMIN_ID = 606386012  # твой Telegram ID
+ADMIN_ID = 8384055519  # твой Telegram ID
 
 # состояния пользователей
 # wait_data → ждём данные
@@ -102,3 +102,4 @@ app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, user_message))
 
 
 app.run_polling()
+
